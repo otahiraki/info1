@@ -1,9 +1,16 @@
 import datasets
-from regression import LinearRegression
+import regression
+import importlib
+
+importlib.reload(regression)
 
 X, Y = datasets.load_linear_example1()
 
-model = LinearRegression()
-model.fit(X, Y)
+model = regression.LinearRegression()
 
+# fit
+model.fit(X, Y)
 print("theta:", model.theta)
+
+# predict
+print("predict:", model.predict(X))
