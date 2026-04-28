@@ -4,11 +4,12 @@ class LinearRegression:
     def __init__(self):
         self.theta = None
 
-    def fit(self, X, Y):
+    def fit(self, x, y):
+        temp = np.linalg.inv(np.dot(x.T, x))
+        self.theta = np.dot(np.dot(temp, x.T), y)
+
+    def predict(self, x):
         pass
 
-    def predict(self, X):
-        pass
-
-    def score(self, X, Y):
+    def score(self, x, y):
         pass
