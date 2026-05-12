@@ -22,9 +22,7 @@ plt.figure(figsize=(8, 5))
 
 x_line = np.linspace(-1, 1, 100)
 plt.plot(x_line, true_function(x_line), label='True function', zorder=1)
-
 plt.scatter(df['観測点'], df['真値'], color='red', label='Samples', s=30, zorder=2)
-
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Exercise 1.2: Observed points and True values')
